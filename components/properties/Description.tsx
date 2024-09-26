@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Title from "./Title";
-import dynamic from "next/dynamic";
-import { Skeleton } from "../ui/skeleton";
 
 const Description = ({ description }: { description: string }) => {
   const [isFullDescriptionShown, setIsFullDescriptionShown] = useState(false);
