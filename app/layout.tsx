@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/navbar/Navbar";
 import Providers from "@/providers";
 import { dark } from "@clerk/themes";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -65,6 +66,7 @@ export default function RootLayout({
           <Providers>
             <Navbar /> <main className="container  sm:py-10">{children}</main>
           </Providers>
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
